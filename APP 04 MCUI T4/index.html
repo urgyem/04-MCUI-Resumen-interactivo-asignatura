@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevención de Infección Nosocomial - MCUI 2025-2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="https://www.universidadviu.com/sites/universidadviu.com/themes/custom/sbx_theme/logo.webp" alt="Logo Universidad VIU" class="header-logo">
+            <h1>TEMA 4: PREVENCIÓN DE INFECCIÓN NOSOCOMIAL. HIGIENE DE MANOS Y PROYECTOS ZERO</h1>
+            <div class="course-info">
+                <p><strong>Máster Universitario en Cuidados de Enfermería en Reanimación y Medicina Intensiva</strong></p>
+                <p>Asignatura: Calidad, seguridad y aspectos psicosociales en las unidades de cuidados intensivos.</p>
+                <p>Profesora: Elena Plaza Moreno.</p>
+                <p class="copyright">Aplicación creada por Elena Plaza Moreno. © 2025 Todos los derechos reservados.</p>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar en el contenido..." class="search-input">
+                <button id="searchBtn" class="search-btn">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <div class="nav-container">
+            <button class="nav-item active" data-section="introduccion">
+                <span class="nav-number">1</span>
+                <span class="nav-text">Introducción y definición de IRAS</span>
+            </button>
+            <button class="nav-item" data-section="registros">
+                <span class="nav-number">2</span>
+                <span class="nav-text">Registros y sistemas de vigilancia</span>
+            </button>
+            <button class="nav-item" data-section="resistencia">
+                <span class="nav-number">3</span>
+                <span class="nav-text">Proyecto Resistencia ZERO</span>
+            </button>
+            <button class="nav-item" data-section="neumonia">
+                <span class="nav-number">4</span>
+                <span class="nav-text">Proyecto Neumonía ZERO</span>
+            </button>
+            <button class="nav-item" data-section="itu">
+                <span class="nav-number">5</span>
+                <span class="nav-text">Proyecto ITU ZERO</span>
+            </button>
+            <button class="nav-item" data-section="bacteriemia">
+                <span class="nav-number">6</span>
+                <span class="nav-text">Proyecto Bacteriemia ZERO</span>
+            </button>
+            <button class="nav-item" data-section="higiene">
+                <span class="nav-number">7</span>
+                <span class="nav-text">Higiene de manos</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <main class="main-content">
+        <section id="introduccion" class="content-section active">
+            <div class="section-header">
+                <h2>Introducción y definición de IRAS</h2>
+                <p class="section-description">Conoce qué son las infecciones relacionadas con la atención sanitaria y su impacto.</p>
+            </div>
+
+            <div class="two-col-grid">
+                <div class="content-card">
+                    <h3>Definición de IRAS</h3>
+                    <p>Las <strong>Infecciones Relacionadas con la Atención Sanitaria (IRAS)</strong> son aquellas que el paciente puede contraer como consecuencia de la asistencia/atención recibida en un centro asistencial, que no estaban presentes ni incubándose en el momento del ingreso.</p>
+                    <div class="expandable-content">
+                        <button class="expand-btn" data-target="definicion-detalle">Ver más detalles</button>
+                        <div id="definicion-detalle" class="expandable-section">
+                            <ul>
+                                <li>También conocidas como infecciones nosocomiales.</li>
+                                <li>Incluyen infecciones adquiridas en el hospital que se manifiestan después del alta.</li>
+                                <li>Comprenden infecciones ocupacionales del personal sanitario.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h3>Impacto y magnitud del problema</h3>
+                    <p>Las IRAS son un importante problema de salud pública que puede provocar:</p>
+                    <ul>
+                        <li>Aumento de las estancias hospitalarias.</li>
+                        <li>Discapacidad a largo plazo.</li>
+                        <li>Aumento de resistencias a los antibióticos.</li>
+                        <li>Muertes innecesarias.</li>
+                    </ul>
+                    <p>Entre un <strong>5-10%</strong> de los pacientes hospitalizados desarrolla alguna IRAS. Hasta un <strong>20-30%</strong> de ellas son prevenibles.</p>
+                </div>
+            </div>
+
+            <div class="content-card full-width-card">
+                <h3>Vías de transmisión principales</h3>
+                <div class="transmission-grid">
+                    <div class="transmission-item">
+                        <div class="transmission-icon">🏥</div>
+                        <h4>Material clínico contaminado</h4>
+                        <p>Instrumental, dispositivos médicos, superficies</p>
+                    </div>
+                    <div class="transmission-item">
+                        <div class="transmission-icon">🔬</div>
+                        <h4>Superficies contaminadas</h4>
+                        <p>Camas, mesas, equipos de monitorización</p>
+                    </div>
+                    <div class="transmission-item">
+                        <div class="transmission-icon">👐</div>
+                        <h4>Manos y guantes contaminados</h4>
+                        <p>Principal vía de transmisión cruzada</p>
+                    </div>
+                </div>
+                
+                <div class="expandable-content">
+                    <button class="expand-btn" data-target="transmision-detalle">Ver mecanismos de transmisión</button>
+                    <div id="transmision-detalle" class="expandable-section">
+                        <h4>Tipos de transmisión:</h4>
+                        <ul>
+                            <li><strong>Contacto directo:</strong> Paciente a paciente</li>
+                            <li><strong>Contacto indirecto:</strong> A través de superficies o instrumentos</li>
+                            <li><strong>Gotas:</strong> Partículas >5 micras (distancia <1 metro)</li>
+                            <li><strong>Aerosoles:</strong> Partículas ≤5 micras (suspendidas en aire)</li>
+                            <li><strong>Vehículo común:</strong> Agua, medicamentos, alimentos</li>
+                            <li><strong>Vector:</strong> Insectos u otros artrópodos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="registros" class="content-section">
+            <div class="section-header">
+                <h2>Registros y sistemas de vigilancia</h2>
+                <p class="section-description">Sistemas de monitorización y control de infecciones nosocomiales en España.</p>
+            </div>
+            
+            <div class="two-col-grid">
+                <div class="content-card">
+                    <h3>Estudio EPINE 2024</h3>
+                    <p>El <strong>Estudio de Prevalencia de las Infecciones Nosocomiales en España (EPINE)</strong> es un estudio epidemiológico, transversal y de prevalencia que proporciona una "foto" de la situación de las IRAS en un momento dado.</p>
+                    <h4>Localizaciones de infecciones (2024)</h4>
+                    <div class="bar-chart">
+                        <div class="bar-item"><span class="bar-label">Respiratorias</span><div class="bar"><div class="bar-fill" style="width: 24.8%"></div><span class="bar-value">24.8%</span></div></div>
+                        <div class="bar-item"><span class="bar-label">Quirúrgicas</span><div class="bar"><div class="bar-fill" style="width: 20.6%"></div><span class="bar-value">20.6%</span></div></div>
+                        <div class="bar-item"><span class="bar-label">Urinarias</span><div class="bar"><div class="bar-fill" style="width: 20.1%"></div><span class="bar-value">20.1%</span></div></div>
+                        <div class="bar-item"><span class="bar-label">Bacteriemias</span><div class="bar"><div class="bar-fill" style="width: 12.55%"></div><span class="bar-value">12.55%</span></div></div>
+                    </div>
+                </div>
+                
+                <div class="content-card">
+                    <h3>Estudio ENVIN-HELICS</h3>
+                    <p>El <strong>Estudio Nacional de Vigilancia de Infección Nosocomial en UCI (ENVIN)</strong> es un registro nacional (desde 1994) y europeo que monitoriza las infecciones relacionadas con dispositivos en Cuidados Intensivos.</p>
+                    <p>Su importancia radica en que la información recogida en sus informes anuales se utiliza para elaborar los <strong>Proyectos ZERO</strong>.</p>
+                    <div class="expandable-content">
+                        <button class="expand-btn" data-target="envin-details">Ver objetivos y metodología</button>
+                        <div id="envin-details" class="expandable-section">
+                            <h4>Objetivos principales:</h4>
+                            <ul>
+                                <li>Conocer las tasas de infecciones más relevantes en UCI.</li>
+                                <li>Estudiar la tendencia de la flora infectante y sus patrones de sensibilidad.</li>
+                                <li>Comparar la evolución en el consumo de antibióticos.</li>
+                                <li>Proporcionar herramientas de autovigilancia a las unidades.</li>
+                            </ul>
+                            <h4>Infecciones objeto de estudio:</h4>
+                            <ul>
+                                <li>Neumonías asociadas a ventilación mecánica (NAVM).</li>
+                                <li>Infección urinaria asociada a sondaje (ITU-SU).</li>
+                                <li>Bacteriemia de origen desconocido y secundaria.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resistencia" class="content-section">
+            <div class="section-header">
+                <h2>Proyecto Resistencia ZERO</h2>
+                <p class="section-description">Estrategia nacional para reducir las bacterias multirresistentes (BMR).</p>
+            </div>
+            
+            <div class="two-col-grid">
+                <div class="content-card">
+                    <h3>Problema y Objetivos</h3>
+                    <p>🟠 <strong>Problema:</strong> Aparición de resistencias a antibióticos. En el contexto de UCI, el paciente tiene una vulnerabilidad aumentada y es especialmente sensible a ser colonizado por BMR.</p>
+                    <p>🟠 <strong>Objetivos del proyecto:</strong></p>
+                    <ul>
+                        <li>Reducir en un 20% la tasa de pacientes con BMR de origen nosocomial.</li>
+                        <li>Describir el mapa de las BMR dentro de las UCI españolas.</li>
+                        <li>Promover y reforzar la cultura de seguridad en las UCI.</li>
+                        <li>Crear una red nacional que aplique prácticas seguras.</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>Anexo: ¿Qué es una BMR?</h3>
+                    <p>🟠 <strong>Definición:</strong> Microorganismos resistentes a tres o más antimicrobianos habitualmente empleados en su tratamiento, con relevancia clínica y epidemiológica.</p>
+                    <ul>
+                        <li><strong>Relevancia clínica:</strong> Dificultad para el tratamiento.</li>
+                        <li><strong>Relevancia epidemiológica:</strong> Posibilidad de brotes y transmisión.</li>
+                    </ul>
+                    <p><strong>Excepciones:</strong> En SARM y ERV, la resistencia se considera a un solo antibiótico.</p>
+                </div>
+            </div>
+
+            <div class="content-card full-width-card">
+                <h3>Decálogo de medidas preventivas</h3>
+                <p>El proyecto agrupa sus recomendaciones en dos bloques (STOP BMR y PSI) y las resume en este decálogo de 10 medidas clave:</p>
+                <div class="decalogo-container">
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="decalogo-1">1. Responsable de antimicrobianos</button>
+                        <div id="decalogo-1" class="expandable-section"><p>Identificar en cada UCI, al menos, un médico intensivista responsable del control de antimicrobianos. El cumplimiento es responsabilidad de todo el personal médico. Se debe valorar a las 72h del inicio del tratamiento empírico la respuesta terapéutica.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="decalogo-2">2. Uso prudente de antimicrobianos</button>
+                        <div id="decalogo-2" class="expandable-section"><p>Administrar de forma empírica antimicrobianos activos frente a BMR solo en infecciones con sepsis grave o shock séptico y alta sospecha. Intentar siempre obtener muestras clínicas antes de iniciar el tratamiento y buscar la desescalada a monoterapia.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="decalogo-3">3. Referente de enfermería</button>
+                        <div id="decalogo-3" class="expandable-section"><p>Identificar en cada UCI una enfermera, al menos, como referente del proyecto RZ y responsable del control de las precauciones dirigidas a evitar la transmisión de BMR. Será formadora del lavado de manos y medidas de aislamiento.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="decalogo-4">4. Búsqueda activa de BMR</button>
+                        <div id="decalogo-4" class="expandable-section"><p>Se recomienda realizar una búsqueda activa de BMR en todos los pacientes al ingreso en la Unidad y, al menos, una vez por semana. Mínimo muestra nasal, rectal y de orofaringe (o secreciones bronquiales si está intubado).</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="decalogo-5">5. Checklist de riesgo</button>
+                        <div id="decalogo-5" class="expandable-section"><p>Al ingreso de un paciente en la UCI, se cumplimentará una lista de verificación para identificar a aquellos con elevado riesgo de ser portadores de BMR. En estos casos se aplicarán, de manera preventiva, precauciones de contacto hasta tener los resultados.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="decalogo-6">6. Control de precauciones</button>
+                        <div id="decalogo-6" class="expandable-section"><p>Controlar el cumplimiento de las diferentes precauciones: estándar y por mecanismos de transmisión (contacto, aéreo, gotas). La enfermera es la persona autorizada para controlar el cumplimiento, que es obligatorio para personal y familiares.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="decalogo-7">7. Protocolo de limpieza de habitación</button>
+                        <div id="decalogo-7" class="expandable-section"><p>Disponer de un protocolo actualizado de limpieza diaria y al alta de las habitaciones ocupadas por pacientes con BMR.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="decalogo-8">8. Limpieza de material clínico</button>
+                        <div id="decalogo-8" class="expandable-section"><p>Elaborar una ficha o documento, para el personal sanitario, sobre la limpieza del material clínico y aparatos de exploración de uso común por los pacientes ingresados.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="decalogo-9">9. Higiene con clorhexidina</button>
+                        <div id="decalogo-9" class="expandable-section"><p>Incluir en la higiene diaria de los pacientes colonizados o infectados por BMR productos que contengan clorhexidina al 4%. Su uso no excluye la utilización de esponjas para eliminar residuos orgánicos.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="decalogo-10">10. Tipificación molecular en brotes</button>
+                        <div id="decalogo-10" class="expandable-section"><p>Ante la sospecha de un brote epidémico se recomienda tipificar a nivel molecular el microorganismo causante. Se puede recurrir de forma gratuita al Centro Nacional de Microbiología del Instituto de Salud Carlos III.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="neumonia" class="content-section">
+            <div class="section-header">
+                <h2>Proyecto Neumonía ZERO</h2>
+                <p class="section-description">Prevención de la neumonía asociada a ventilación mecánica (NAV).</p>
+            </div>
+
+            <div class="content-card full-width-card">
+                <h3>Definición y Objetivos</h3>
+                <p><strong>Definición de NAV:</strong> Es aquella neumonía que se produce en un paciente con intubación endotraqueal (o traqueotomía) y que no estaba presente, ni en periodo de incubación, en el momento de la intubación.</p>
+                <p>🟠 <strong>Problema:</strong> La NAV es la principal fuente de infección adquirida en las UCI.</p>
+                <p>🟠 <strong>Objetivos del proyecto:</strong></p>
+                 <ul>
+                    <li>Reducir la media estatal de NAV a menos de 7 episodios por cada 1000 días de ventilación mecánica.</li>
+                    <li>Promover y reforzar la cultura de seguridad en las UCI.</li>
+                    <li>Mantener una red de UCI que apliquen prácticas seguras.</li>
+                </ul>
+            </div>
+
+            <div class="content-card full-width-card">
+                <h3>Recomendaciones del Proyecto</h3>
+                 <p>Las recomendaciones se agrupan en dos bloques: <strong>STOP NAV</strong> (paquete de medidas básicas y obligatorias) y <strong>PSI</strong> (Programa de Seguridad Integral para fortalecer la cultura de seguridad).</p>
+                <div class="recommendations-grid">
+                    <div class="recommendation-item"><span class="rec-number">1</span><div class="rec-content"><h4>Cabecera elevada >30°</h4><p>Excepto si existe contraindicación clínica.</p></div></div>
+                    <div class="recommendation-item"><span class="rec-number">2</span><div class="rec-content"><h4>Higiene de manos estricta</h4><p>Antes y después de manipular la vía aérea.</p></div></div>
+                    <div class="recommendation-item"><span class="rec-number">3</span><div class="rec-content"><h4>Formación del personal</h4><p>En el manejo de la vía aérea.</p></div></div>
+                    <div class="recommendation-item"><span class="rec-number">4</span><div class="rec-content"><h4>Favorecer extubación segura</h4><p>Para reducir el tiempo de ventilación.</p></div></div>
+                    <div class="recommendation-item"><span class="rec-number">5</span><div class="rec-content"><h4>Control de presión del neumotaponamiento</h4><p>De forma continua (20-30 cmH₂O).</p></div></div>
+                    <div class="recommendation-item"><span class="rec-number">6</span><div class="rec-content"><h4>Aspiración de secreciones subglóticas</h4><p>Emplear tubos con sistema de aspiración continua.</p></div></div>
+                    <div class="recommendation-item"><span class="rec-number">7</span><div class="rec-content"><h4>No cambiar tubuladuras</h4><p>No cambiar de forma programada las del respirador.</p></div></div>
+                    <div class="recommendation-item"><span class="rec-number">8</span><div class="rec-content"><h4>Antibióticos post-intubación</h4><p>Durante 24h en pacientes con disminución de consciencia previa.</p></div></div>
+                    <div class="recommendation-item"><span class="rec-number">9</span><div class="rec-content"><h4>Higiene bucal con clorhexidina</h4><p>Al 0,12-0,2%.</p></div></div>
+                    <div class="recommendation-item"><span class="rec-number">10</span><div class="rec-content"><h4>Descontaminación selectiva digestiva</h4><p>Utilizar la descontaminación selectiva digestiva completa.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="itu" class="content-section">
+            <div class="section-header">
+                <h2>Proyecto ITU ZERO</h2>
+                <p class="section-description">Prevención de infecciones del tracto urinario (ITU) asociadas a catéter.</p>
+            </div>
+            
+            <div class="content-card full-width-card">
+                 <h3>Problema y Objetivos</h3>
+                 <p>🟠 <strong>Problema:</strong> Las ITU representan un porcentaje elevado de las IRAS y aproximadamente el 70% están asociadas con un catéter uretral permanente.</p>
+                 <p>🟠 <strong>Objetivos del proyecto:</strong></p>
+                 <ul>
+                    <li>Reducir la media del sistema nacional (reducción de un 40%).</li>
+                    <li>Reducir la ratio de utilización de la sonda uretral (18%).</li>
+                    <li>Fomentar la formación específica.</li>
+                    <li>Actualizar protocolos de inserción y mantenimiento en UCI.</li>
+                 </ul>
+                 <p>Las recomendaciones se agrupan en dos bloques: <strong>STOP ITU ZERO</strong> (medidas básicas) y <strong>PSI</strong> (Programa de Seguridad Integral).</p>
+            </div>
+
+          
+            <div class="content-card full-width-card">
+                <h3>5 Puntos clave para prevenir las ITU</h3>
+                <ol class="styled-list">
+                    <li>Utilizar la sonda uretral solo cuando esté indicado.</li>
+                    <li>Utilizar técnica aséptica durante la inserción.</li>
+                    <li>Mantener siempre cerrado el sistema.</li>
+                    <li>Mantener el flujo de orina sin obstáculos, colocando la bolsa siempre por debajo de la vejiga.</li>
+                    <li>Retirar la sonda cuando no sea necesaria, valorando diariamente su indicación.</li>
+                </ol>
+            </div>
+            
+            <img src="https://i.postimg.cc/kMN1qFKt/itu.png" alt="Resumen visual del protocolo ITU ZERO" class="content-image full-width-card">
+
+            <div class="content-card no-do-card full-width-card">
+                <h3>❌ NO HACER ❌</h3>
+                <ul>
+                    <li>Usar antisépticos y antibióticos en la higiene diaria rutinaria.</li>
+                    <li>Usar antimicrobianos profilácticos en la inserción, mantenimiento o retirada de la sonda.</li>
+                    <li>Cambiar de forma rutinaria la sonda.</li>
+                    <li>Realizar lavados vesicales.</li>
+                    <li>Tomar cultivos si no se sospecha infección.</li>
+                    <li>Pautar antimicrobianos en bacteriuria asintomática.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="bacteriemia" class="content-section">
+            <div class="section-header">
+                <h2>Proyecto Bacteriemia ZERO</h2>
+                <p class="section-description">Prevención de bacteriemias relacionadas con catéter venoso central (CVC).</p>
+            </div>
+            
+            <div class="content-card full-width-card">
+                <h3>Problema y Objetivos</h3>
+                <p>🟠 <strong>Problema:</strong> Las bacteriemias relacionadas con catéteres son una de las infecciones más frecuentes asociadas al uso de dispositivos, además de aumentar la mortalidad, las estancias y los costes.</p>
+                <p>🟠 <strong>Objetivos del proyecto (actualizado en 2021):</strong></p>
+                <ul>
+                    <li>Reducir la media estatal a menos de 3 episodios de BP por 1000 días de CVC.</li>
+                    <li>Promover y reforzar la cultura de seguridad en las UCI.</li>
+                    <li>Crear una red de UCI que apliquen prácticas seguras y de efectividad demostrada.</li>
+                    <li>Documentar todos los episodios de bacteriemia, su etiología y las características de los pacientes que las desarrollan.</li>
+                </ul>
+                <p>Las recomendaciones se agrupan en dos bloques: <strong>STOP BRC</strong> (medidas obligatorias, opcionales y de “no hacer”) y <strong>PSI</strong> (Programa de seguridad integral).</p>
+            </div>
+
+            <div class="content-card full-width-card">
+                <h3>Medidas de Cumplimiento Obligatorio</h3>
+                <div class="decalogo-container">
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="bzero-1">1. Higiene de manos</button>
+                        <div id="bzero-1" class="expandable-section"><p>Higiene adecuada de manos antes y después de palpar los lugares de inserción de los catéteres, así como antes y después de insertar, remplazar, acceder, reparar o proteger un catéter intravascular. El uso de guantes no exime de la higiene de manos.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="bzero-2">2. Desinfección con Clorhexidina</button>
+                        <div id="bzero-2" class="expandable-section"><p>Desinfectar la piel con una solución alcohólica de clorhexidina (0,5-2%) y alcohol de 70º antes de la inserción del CVC. Si hay contraindicación, usar soluciones alcohólicas yodadas. El antiséptico debe secarse completamente antes de la inserción.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="bzero-3">3. Medidas de barrera total</button>
+                        <div id="bzero-3" class="expandable-section"><p>Utilizar una técnica aséptica y barreras de máxima esterilidad (gorro, mascarilla, bata estéril, guantes estériles y paño estéril grande que cubra al paciente) durante la inserción de CVC para reducir sustancialmente la incidencia de bacteriemia.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="bzero-4">4. Preferencia de vena subclavia</button>
+                        <div id="bzero-4" class="expandable-section"><p>Dar preferencia a la vena subclavia como lugar de inserción, teniendo en cuenta otros factores como posibles complicaciones no infecciosas y la habilidad del facultativo.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="bzero-5">5. Retirada de catéteres innecesarios</button>
+                        <div id="bzero-5" class="expandable-section"><p>Evaluar, al menos una vez al día, la necesidad de los dispositivos vasculares que lleva el paciente y retirar aquellos que no sean necesarios.</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="bzero-6">6. Manejo higiénico de catéteres</button>
+                        <div id="bzero-6" class="expandable-section"><p>Reducir al mínimo la manipulación de conexiones y limpiar los puntos de inyección con alcohol isopropílico de 70º antes de acceder. Sustituir equipos de infusión con una frecuencia no inferior a 96 horas (o según fabricante).</p></div>
+                    </div>
+                    <div class="expandable-section-item">
+                        <button class="expand-btn" data-target="bzero-7">7. Cambio de equipos de nutrición</button>
+                        <div id="bzero-7" class="expandable-section"><p>Los cambios de equipo de nutrición parenteral se cambian cada 24 horas y si hay emulsiones lipídicas, cada 6-12 horas.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card no-do-card full-width-card">
+                <h3>❌ Lista "NO HACER" ❌</h3>
+                <ul>
+                    <li>Dejar puertos sin tapón.</li>
+                    <li>Usar profilaxis antibiótica rutinaria durante la inserción de CVC.</li>
+                    <li>Realizar cambios periódicos de CVC por punción.</li>
+                    <li>Realizar cambios rutinarios de CVC mediante guías.</li>
+                    <li>Reutilizar el mismo equipo de infusión con nuevas bolsas de hemoderivados.</li>
+                    <li>Aplicar antibióticos o antisépticos tópicos en el punto de inserción.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="higiene" class="content-section">
+            <div class="section-header">
+                <h2>Higiene de manos</h2>
+                <p class="section-description">La medida más importante, simple y eficaz para prevenir las IRAS.</p>
+            </div>
+
+            <div class="objective-highlight">
+                <h3>📊 Indicador de Cumplimiento</h3>
+                <p>El estándar de cumplimiento de higiene de manos es <strong>> 90%</strong>.</p>
+            </div>
+            
+            <div class="content-card full-width-card">
+                <h3>Los 5 Momentos de la OMS</h3>
+                <img src="https://i.postimg.cc/bY3zdbjs/Los-5-momentos-de-la-OMS.png" alt="Ejemplos visuales de los 5 momentos de la higiene de manos" class="content-image">
+                <div class="expandable-content">
+                    <button class="expand-btn" data-target="momentos-detalle">Ver explicación de cada momento</button>
+                    <div id="momentos-detalle" class="expandable-section">
+                        <p><strong>1. Antes de tocar al paciente:</strong> Para proteger al paciente de gérmenes nocivos presentes en tus manos.</p>
+                        <p><strong>2. Antes de realizar una tarea limpia/aséptica:</strong> Para evitar que gérmenes, incluidos los del propio paciente, infecten su organismo.</p>
+                        <p><strong>3. Después del riesgo de exposición a líquidos corporales:</strong> Para protegerte a ti y al entorno de la propagación de gérmenes.</p>
+                        <p><strong>4. Después de tocar al paciente:</strong> Para protegerte a ti y al entorno de la colonización de gérmenes del paciente.</p>
+                        <p><strong>5. Después del contacto con el entorno del paciente:</strong> Para protegerte de gérmenes que pudieran estar en superficies y objetos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card full-width-card">
+                <h3>Técnica de higiene de manos</h3>
+                <img src="https://i.postimg.cc/sDyLh0sc/Higiene-de-manos.png" alt="Pasos para la correcta higiene de manos con solución alcohólica y con agua y jabón" class="content-image">
+            </div>
+
+            <div class="two-col-grid">
+                <div class="content-card">
+                    <h3>¿Lavado o desinfección?</h3>
+                    <h4>💧 Preferir agua y jabón</h4>
+                    <p>Cuando las manos estén <strong>visiblemente sucias</strong>, manchadas con fluidos, o tras usar el inodoro. También es el método preferible ante sospecha de patógenos con esporas (ej. <em>Clostridium difficile</em>).</p>
+                    <h4>🧴 Preferir solución alcohólica</h4>
+                    <p>Es el método <strong>preferente</strong> si las manos no están visiblemente sucias. Es más rápido, más eficaz y mejor tolerado por la piel.</p>
+                </div>
+
+                <div class="content-card">
+                    <h3>Uso correcto de guantes</h3>
+                    <p>El uso de guantes <strong>no exime</strong> de la necesidad de realizar la higiene de manos. Deben retirarse para realizar la higiene en los momentos indicados.</p>
+                    <div class="expandable-content">
+                        <button class="expand-btn" data-target="guantes-piramide">Ver pirámide de uso de la OMS</button>
+                        <div id="guantes-piramide" class="expandable-section">
+                            <p><strong>NO INDICADO (salvo precaución de contacto):</strong> Sin riesgo de exposición a fluidos (ej. tomar la tensión, administrar medicación oral, usar el teléfono).</p>
+                            <p><strong>GUANTES DE EXPLORACIÓN:</strong> Ante la posibilidad de tocar sangre o fluidos (ej. contacto con mucosas, inserción de IV, manejo de residuos).</p>
+                            <p><strong>GUANTES ESTÉRILES:</strong> En procedimientos quirúrgicos, partos, o inserción de vías centrales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="navigation-buttons">
+        <button id="prevBtn" class="nav-btn">← Anterior</button>
+        <button id="nextBtn" class="nav-btn">Siguiente →</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
